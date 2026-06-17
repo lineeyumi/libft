@@ -1,2 +1,131 @@
-# libft
+*This project has been created as part of the 42 curriculum by atakata*
+
+## Description
+
 The Libft project goal is to re-create standard C library functions (from `string.h`, `ctype.h`, `stdlib.h`, etc.), as well as additional functions that are not part of the standard library but are highly useful for data manipulation.
+
+*   **Language:** C
+*   **Norminette:** Compliant with 42 code standard.
+*   **Memory Management:** No leaks allowed.
+
+
+## Function List
+
+### Part 1 - Libc Functions
+*   `ft_isalpha` - Checks for an alphanumeric character.
+*   `ft_isdigit` - Checks for a digit (0 through 9).
+*   `ft_isalnum` - Checks for an alphanumeric character.
+*   `ft_isascii` - Checks whether c fits into the ASCII character set.
+*   `ft_isprint` - Checks for any printable character.
+*   `ft_strlen` - Calculates the length of a string.
+*   `ft_memset` - Fills memory with a constant byte.
+*   `ft_bzero` - Zeroes a byte string.
+*   `ft_memcpy` - Copies memory area.
+*   `ft_memmove` - Copies memory area with overlap handling.
+*   `ft_strlcpy` - Size-bounded string copying.
+*   `ft_strlcat` - Size-bounded string concatenation.
+*   `ft_toupper` - Converts char to uppercase.
+*   `ft_tolower` - Converts char to lowercase.
+*   `ft_strchr` - Locates character in string.
+*   `ft_strrchr` - Locates character in string from the end.
+*   `ft_strncmp` - Compares two strings up to n bytes.
+*   `ft_memchr` - Scans memory for a character.
+*   `ft_memcmp` - Compares memory areas.
+*   `ft_strnstr` - Locates a substring in a string.
+*   `ft_atoi` - Converts a string to an integer.
+*   `ft_calloc` - Allocates memory and sets it to zero.
+*   `ft_strdup` - Creates a duplicate of a string.
+
+### Part 2 - Additional Functions
+*   `ft_substr` - Extracts a substring from a string.
+*   `ft_strjoin` - Concatenates two strings into a new one.
+*   `ft_strtrim` - Trims specific characters from start and end of a string.
+*   `ft_split` - Splits a string into an array of strings using a delimiter.
+*   `ft_itoa` - Converts an integer to a string.
+*   `ft_strmapi` - Applies a function to each character of a string creating a new one.
+*   `ft_striteri` - Applies a function to each character of a string.
+*   `ft_putchar_fd` - Outputs a character to a file descriptor.
+*   `ft_putstr_fd` - Outputs a string to a file descriptor.
+*   `ft_putendl_fd` - Outputs a string followed by a newline to a file descriptor.
+*   `ft_putnbr_fd` - Outputs an integer to a file descriptor.
+
+### Part 3 - Lists manipulation
+*   `ft_lstnew` - Creates a new list element.
+*   `ft_lstadd_front` - Adds an element at the beginning of a list.
+*   `ft_lstsize` - Counts the number of elements in a list.
+*   `ft_lstlast` - Returns the last element of a list.
+*   `ft_lstadd_back` - Adds an element at the end of a list.
+*   `ft_lstdelone` - Deletes a list element.
+*   `ft_lstclear` - Deletes and frees a list.
+*   `ft_lstiter` - Iterates and applies a function to each element of a list.
+*   `ft_lstmap` - Iterates and applies a function to create a new list.
+
+
+
+## Instructions
+
+### Prerequisites
+You will need a C compiler (`gcc` or `clang`) and `make` installed.
+
+### Compilation
+Clone the repository and run `make` inside the folder:
+
+```bash
+git clone <repository>
+cd libft
+```
+
+To compile the library:
+```bash
+make
+```
+
+To remove the object files:
+```bash
+make clean
+```
+
+To remove the object files and the library:
+```bash
+make fclean
+```
+
+To recompile the project from scratch:
+```bash
+make re
+```
+
+### Makefile Commands
+*   `make` - Compares and compiles mandatory files into `libft.a`.
+*   `make clean` - Removes object files (`.o`).
+*   `make fclean` - Removes object files and `libft.a`.
+*   `make re` - Re-compiles the entire library.
+
+### Integrating into your project
+To use Libft in your next 42 projects, include the header in your C files and compile with the library flag:
+
+```c
+#include "libft.h"
+```
+
+```bash
+cc main.c -L. -lft
+```
+
+
+## Resources
+The following resources were used to better understand the requirements of the project:
+* Official manuals
+* Peer discussions and reviews
+* The linked list video from WR Kits to better understand how liked lists worked and its syntaxes.
+
+## Testing and AI Usage
+
+### Unit Testing
+This library was rigorously validated using the **libft-god** and the **Tripouille** testers to catch edge cases, memory leaks, and segmentation faults, ensuring absolute stability before peer evaluations.
+
+### AI Assistance Acknowledgement
+AI was integrated into the development workflow as a peer-programming tool. It was specifically used for:
+*   **Edge Case Analysis:** Brainstorming potential failure points for complex functions.
+*   **Code Optimization:** Reviewing memory allocation logic to guarantee compliance with 42 standards and avoid leaks.
+*   **Debugging:** Understanding specific test failure logs generated by the automated testers.
